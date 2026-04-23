@@ -344,3 +344,6 @@ temp/
 !.env.example
 secrets/
 credentials/
+
+
+*.vs/
