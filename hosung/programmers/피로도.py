@@ -11,5 +11,5 @@ def solution(k, dungeons):
                 ch[i] = 0
                 
     DFS(k,0)
-    
+
     return answer
