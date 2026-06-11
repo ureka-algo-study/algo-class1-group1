@@ -1,6 +1,7 @@
+package seoa.LeetCode;
 import java.util.*;
 
-class LeetCode_207_CourseSchedule {
+public class LeetCode_207_CourseSchedule {
     public boolean canFinish(int numCourses, int[][] prerequisites) {
         int[] indegree = new int[numCourses];
         List<List<Integer>> graph = new ArrayList<>();
