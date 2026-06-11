@@ -2,8 +2,6 @@ import java.util.*;
 
 class Solution {
     public int solution(int N, int[][] road, int K) {
-        int answer = 0;
-
         Map<Integer, List<Node>> graph = new HashMap<>();
 
         for (int i = 1; i <= N; i++) {
