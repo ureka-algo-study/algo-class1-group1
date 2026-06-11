@@ -35,7 +35,7 @@ public class LeetCode_77_Combination {
 		}
 		
 		for (int i = start; i < n; i++) {
-			//idx 지금 내 위치 start 앞으로 찾아야 하는 위치 (다음에 찾을 위치)
+			//idx는 selNum에서 지금 내 위치 (이미 몇 개가 저장됐는지) start는 nums에서 숫자를 찾아야 하는 위치 (다음에 찾을 위치)
 			selNums.add(nums[i]);
 			workCombine(idx+1, i+1);
             selNums.remove(selNums.size()-1);

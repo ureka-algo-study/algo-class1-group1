@@ -5,6 +5,7 @@ import java.util.Stack;
 public class LeetCode_739_DailyTemperatures {
 	public int[] dailyTemperatures(int[] temperatures) {
 		int[] answer = new int[temperatures.length];
+		
 		Stack<Integer> tmpStack = new Stack<>();
 		
 		for (int i = 0; i<temperatures.length; i++) {
