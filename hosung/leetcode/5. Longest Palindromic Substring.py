@@ -1,0 +1,38 @@
+# class Solution(object):
+#     def longestPalindrome(self, s):
+#         n = len(s)
+#         max1 = ""
+#
+#         for i in range(n):
+#             for j in range(i + 1, n + 1):
+#                 sub = s[i:j]
+#
+#                 if sub == sub[::-1]:
+#                     if len(sub) > len(max1):
+#                         max1 = sub
+#
+#         return max1
+
+
+class Solution(object):
+    def longestPalindrome(self, s):
+        def expand(l, r):
+            while l >= 0 and r < len(s) and s[l] == s[r]:
+                l -= 1
+                r += 1
+            return s[l+1:r]
+
+        res = ""
+
+        for i in range(len(s)):
+
+            p1 = expand(i, i)
+
+            p2 = expand(i, i+1)
+
+            if len(p1) > len(res):
+                res = p1
+            if len(p2) > len(res):
+                res = p2
+
+        return res
