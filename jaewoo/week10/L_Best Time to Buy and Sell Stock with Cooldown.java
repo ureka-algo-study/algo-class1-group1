@@ -5,7 +5,7 @@ class Solution {
 
         int hold = -prices[0]; //보유
         int sold = 0;          //매도
-        int rest = 0;          //자유
+        int rest = 0;          
 
         for (int i = 1; i < prices.length; i++) {
             int prevHold = hold, prevSold = sold, prevRest = rest;
