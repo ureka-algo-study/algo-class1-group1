@@ -1,32 +1,25 @@
-
-
-import java.util.*;
-
 class Solution {
     public String removeKdigits(String num, int k) {
         Deque<Character> stack = new ArrayDeque<>();
 
-        for (char c : num.toCharArray()) {
-
+        for (char c : num.toCharArray()) { 
             while (k > 0 && !stack.isEmpty() && stack.peekLast() > c) {
                 stack.pollLast();
                 k--;
             }
-            stack.addLast(c);
+            stack.offerLast(c);
         }
 
-
-        while (k > 0) {
+        while(k > 0) {
             stack.pollLast();
             k--;
         }
 
-
         StringBuilder sb = new StringBuilder();
-        boolean leadingZero = true;
-        for (char c : stack) {
-            if (leadingZero && c == '0') continue;
-            leadingZero = false;
+
+        while(!stack.isEmpty()) {
+            char c = stack.pollFirst();
+            if(sb.length() == 0 && c =='0') continue;
             sb.append(c);
         }
 
