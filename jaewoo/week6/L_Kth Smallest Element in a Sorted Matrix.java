@@ -7,9 +7,9 @@ class Solution {
 
         PriorityQueue<Integer> pq = new PriorityQueue<>(Collections.reverseOrder());
 
-        for (int r = 0; r < n; r++) {
-            for (int c = 0; c < n; c++) {
-                pq.offer(matrix[r][c]);
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                pq.offer(matrix[i][j]);
 
                 if (pq.size() > k) {
                     pq.poll();
